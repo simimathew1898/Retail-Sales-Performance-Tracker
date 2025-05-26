@@ -1,0 +1,12 @@
+# Don't track Python cache
+*.pyc
+__pycache__/
+
+# Don't track CSV or raw data
+data/
+
+# Don't track hidden files
+.DS_Store
+
+# Don't track environment files
+.env
