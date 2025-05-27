@@ -32,10 +32,10 @@ jobs:
         DBT_PROFILE: ${{ secrets.DBT_PROFILE }}
 
     - name: Run dbt debug
-      run: dbt debug
+      run: dbt_project/dbt debug
 
     - name: Run dbt models
-      run: dbt run
+      run: dbt_project/dbt run
 
     - name: Run dbt tests
-      run: dbt test
+      run: dbt_project/dbt test
