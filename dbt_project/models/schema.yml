@@ -2,19 +2,23 @@ version: 2
 
 models:
   - name: stg_orders
-    description: Staging model for cleaned orders from raw Superstore dataset
+    description: Cleaned and renamed Superstore orders table
     columns:
       - name: order_id
-        description: Unique order identifier
+        description: Unique identifier for each order
         tests:
           - not_null
       - name: customer_id
-        description: Customer ID
+        description: ID of the customer
         tests:
           - not_null
+      - name: sales
+        description: Sales amount of the order
+      - name: profit
+        description: Profit from the order
 
   - name: fct_sales
-    description: Fact table aggregating sales and profit by category and region
+    description: Aggregated sales and profit by category and region
     columns:
       - name: category
         description: Product category
@@ -25,8 +29,8 @@ models:
         tests:
           - not_null
       - name: total_sales
-        description: Sum of all sales
+        description: Total sales per category/region
       - name: total_profit
-        description: Sum of all profit
+        description: Total profit per category/region
       - name: total_orders
         description: Count of unique orders

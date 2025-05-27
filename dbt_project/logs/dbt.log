@@ -717,3 +717,322 @@ where order_id is null
 [0m10:48:54.476013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B3328E1DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B3328E2690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B3326CD550>]}
 [0m10:48:54.476013 [debug] [MainThread]: Flushing usage events
 [0m10:48:55.381610 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:59:34.911269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199AA84D250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199AA8A7850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199AA8A7990>]}
+
+
+============================== 10:59:34.915093 | de47e145-4d13-4dec-9e66-4ce3213f10e8 ==============================
+[0m10:59:34.915093 [info ] [MainThread]: Running with dbt=1.9.4
+[0m10:59:34.916079 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\Retail-Sales-Performance-Tracker\\dbt_project\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Simi Mathew\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:59:36.670613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de47e145-4d13-4dec-9e66-4ce3213f10e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199BCA8CD90>]}
+[0m10:59:36.733089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de47e145-4d13-4dec-9e66-4ce3213f10e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199A9A43F10>]}
+[0m10:59:36.733089 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m10:59:37.139894 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m10:59:37.326732 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:59:37.326732 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\schema.yml
+[0m10:59:37.968394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de47e145-4d13-4dec-9e66-4ce3213f10e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199BCA8F8D0>]}
+[0m10:59:38.015326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de47e145-4d13-4dec-9e66-4ce3213f10e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199BD08EF10>]}
+[0m10:59:38.015326 [info ] [MainThread]: Found 2 models, 4 data tests, 476 macros
+[0m10:59:38.015326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de47e145-4d13-4dec-9e66-4ce3213f10e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199BD0E8490>]}
+[0m10:59:38.015326 [info ] [MainThread]: 
+[0m10:59:38.015326 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:59:38.015326 [info ] [MainThread]: 
+[0m10:59:38.015326 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:59:38.030963 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUPERSTORE_DB_STAGING'
+[0m10:59:38.187147 [debug] [ThreadPool]: Using snowflake connection "list_SUPERSTORE_DB_STAGING"
+[0m10:59:38.187147 [debug] [ThreadPool]: On list_SUPERSTORE_DB_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_SUPERSTORE_DB_STAGING"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m10:59:38.187147 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:59:39.421102 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.226 seconds
+[0m10:59:39.421102 [debug] [ThreadPool]: Using snowflake connection "list_SUPERSTORE_DB_STAGING"
+[0m10:59:39.436572 [debug] [ThreadPool]: On list_SUPERSTORE_DB_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_SUPERSTORE_DB_STAGING"} */
+show objects in SUPERSTORE_DB.STAGING
+    limit 10000
+    
+;
+[0m10:59:39.654492 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.218 seconds
+[0m10:59:39.654492 [debug] [ThreadPool]: Using snowflake connection "list_SUPERSTORE_DB_STAGING"
+[0m10:59:39.654492 [debug] [ThreadPool]: On list_SUPERSTORE_DB_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_SUPERSTORE_DB_STAGING"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m10:59:39.826360 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.181 seconds
+[0m10:59:39.841879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de47e145-4d13-4dec-9e66-4ce3213f10e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199BD06BA10>]}
+[0m10:59:39.841879 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_orders
+[0m10:59:39.857502 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.dbt_project.stg_orders'
+[0m10:59:39.857502 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_orders
+[0m10:59:39.857502 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_orders"
+[0m10:59:39.857502 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_orders
+[0m10:59:39.857502 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_orders
+[0m10:59:39.857502 [debug] [Thread-1 (]: Began running node model.dbt_project.fct_sales
+[0m10:59:39.873112 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_orders, now model.dbt_project.fct_sales)
+[0m10:59:39.873112 [debug] [Thread-1 (]: Began compiling node model.dbt_project.fct_sales
+[0m10:59:39.873112 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.fct_sales"
+[0m10:59:39.873112 [debug] [Thread-1 (]: Began executing node model.dbt_project.fct_sales
+[0m10:59:39.873112 [debug] [Thread-1 (]: Finished running node model.dbt_project.fct_sales
+[0m10:59:39.873112 [debug] [Thread-1 (]: Began running node test.dbt_project.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:59:39.873112 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.fct_sales, now test.dbt_project.not_null_stg_orders_customer_id.af79d5e4b5)
+[0m10:59:39.873112 [debug] [Thread-1 (]: Began compiling node test.dbt_project.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:59:39.912660 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_project.not_null_stg_orders_customer_id.af79d5e4b5"
+[0m10:59:39.914645 [debug] [Thread-1 (]: Began executing node test.dbt_project.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:59:39.916638 [debug] [Thread-1 (]: Finished running node test.dbt_project.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:59:39.917692 [debug] [Thread-1 (]: Began running node test.dbt_project.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:59:39.918588 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_project.not_null_stg_orders_customer_id.af79d5e4b5, now test.dbt_project.not_null_stg_orders_order_id.81cfe2fe64)
+[0m10:59:39.920213 [debug] [Thread-1 (]: Began compiling node test.dbt_project.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:59:39.929247 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_project.not_null_stg_orders_order_id.81cfe2fe64"
+[0m10:59:39.931240 [debug] [Thread-1 (]: Began executing node test.dbt_project.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:59:39.933223 [debug] [Thread-1 (]: Finished running node test.dbt_project.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:59:39.934277 [debug] [Thread-1 (]: Began running node test.dbt_project.not_null_fct_sales_category.137f096bc8
+[0m10:59:39.935531 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_project.not_null_stg_orders_order_id.81cfe2fe64, now test.dbt_project.not_null_fct_sales_category.137f096bc8)
+[0m10:59:39.936578 [debug] [Thread-1 (]: Began compiling node test.dbt_project.not_null_fct_sales_category.137f096bc8
+[0m10:59:39.943568 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_project.not_null_fct_sales_category.137f096bc8"
+[0m10:59:39.944572 [debug] [Thread-1 (]: Began executing node test.dbt_project.not_null_fct_sales_category.137f096bc8
+[0m10:59:39.946567 [debug] [Thread-1 (]: Finished running node test.dbt_project.not_null_fct_sales_category.137f096bc8
+[0m10:59:39.947560 [debug] [Thread-1 (]: Began running node test.dbt_project.not_null_fct_sales_region.161ffb7f5c
+[0m10:59:39.948535 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_project.not_null_fct_sales_category.137f096bc8, now test.dbt_project.not_null_fct_sales_region.161ffb7f5c)
+[0m10:59:39.949556 [debug] [Thread-1 (]: Began compiling node test.dbt_project.not_null_fct_sales_region.161ffb7f5c
+[0m10:59:39.952659 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_project.not_null_fct_sales_region.161ffb7f5c"
+[0m10:59:39.952659 [debug] [Thread-1 (]: Began executing node test.dbt_project.not_null_fct_sales_region.161ffb7f5c
+[0m10:59:39.952659 [debug] [Thread-1 (]: Finished running node test.dbt_project.not_null_fct_sales_region.161ffb7f5c
+[0m10:59:39.952659 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:59:39.952659 [debug] [MainThread]: Connection 'list_SUPERSTORE_DB_STAGING' was left open.
+[0m10:59:39.952659 [debug] [MainThread]: On list_SUPERSTORE_DB_STAGING: Close
+[0m10:59:40.219270 [debug] [MainThread]: Connection 'test.dbt_project.not_null_fct_sales_region.161ffb7f5c' was properly closed.
+[0m10:59:40.219270 [debug] [MainThread]: Command end result
+[0m10:59:40.311242 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Retail-Sales-Performance-Tracker\dbt_project\target\manifest.json
+[0m10:59:40.317755 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Retail-Sales-Performance-Tracker\dbt_project\target\semantic_manifest.json
+[0m10:59:40.327343 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Retail-Sales-Performance-Tracker\dbt_project\target\run_results.json
+[0m10:59:40.937125 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m10:59:40.937125 [info ] [MainThread]: Building catalog
+[0m10:59:40.953513 [debug] [ThreadPool]: Acquiring new snowflake connection 'SUPERSTORE_DB.information_schema'
+[0m10:59:40.968436 [debug] [ThreadPool]: Using snowflake connection "SUPERSTORE_DB.information_schema"
+[0m10:59:40.968436 [debug] [ThreadPool]: On SUPERSTORE_DB.information_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "SUPERSTORE_DB.information_schema"} */
+with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        case
+            when is_dynamic = 'YES' and table_type = 'BASE TABLE' THEN 'DYNAMIC TABLE'
+            else table_type
+        end as "table_type",
+        comment as "table_comment",
+
+        -- note: this is the _role_ that owns the table
+        table_owner as "table_owner",
+
+        'Clustering Key' as "stats:clustering_key:label",
+        clustering_key as "stats:clustering_key:value",
+        'The key used to cluster this table' as "stats:clustering_key:description",
+        (clustering_key is not null) as "stats:clustering_key:include",
+
+        'Row Count' as "stats:row_count:label",
+        row_count as "stats:row_count:value",
+        'An approximate count of rows in this table' as "stats:row_count:description",
+        (row_count is not null) as "stats:row_count:include",
+
+        'Approximate Size' as "stats:bytes:label",
+        bytes as "stats:bytes:value",
+        'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+        (bytes is not null) as "stats:bytes:include",
+
+        'Last Modified' as "stats:last_modified:label",
+        to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+        'The timestamp for last update/change' as "stats:last_modified:description",
+        (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+    from SUPERSTORE_DB.INFORMATION_SCHEMA.tables
+            where (
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_orders' and upper("table_name") = upper('stg_orders')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'fct_sales' and upper("table_name") = upper('fct_sales')
+
+                )
+            )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from SUPERSTORE_DB.INFORMATION_SCHEMA.columns
+            where (
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_orders' and upper("table_name") = upper('stg_orders')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'fct_sales' and upper("table_name") = upper('fct_sales')
+
+                )
+            )
+        )
+        select *
+    from tables
+    join columns using ("table_database", "table_schema", "table_name")
+    order by "column_index"
+[0m10:59:40.968436 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:59:44.522054 [debug] [ThreadPool]: SQL status: SUCCESS 26 in 3.548 seconds
+[0m10:59:44.561805 [debug] [MainThread]: Wrote artifact CatalogArtifact to D:\Retail-Sales-Performance-Tracker\dbt_project\target\catalog.json
+[0m10:59:44.616043 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Retail-Sales-Performance-Tracker\dbt_project\target\manifest.json
+[0m10:59:44.617990 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Retail-Sales-Performance-Tracker\dbt_project\target\semantic_manifest.json
+[0m10:59:44.618989 [info ] [MainThread]: Catalog written to D:\Retail-Sales-Performance-Tracker\dbt_project\target\catalog.json
+[0m10:59:44.620025 [debug] [MainThread]: Command `dbt docs generate` succeeded at 10:59:44.620025 after 9.79 seconds
+[0m10:59:44.621065 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m10:59:44.621065 [debug] [MainThread]: Connection 'SUPERSTORE_DB.information_schema' was left open.
+[0m10:59:44.622019 [debug] [MainThread]: On SUPERSTORE_DB.information_schema: Close
+[0m10:59:44.857020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199AA883050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199BD0273D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199BD027A10>]}
+[0m10:59:44.857020 [debug] [MainThread]: Flushing usage events
+[0m10:59:45.732439 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:00:04.218450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002295A1BD290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022959AF24D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002295A1BE590>]}
+
+
+============================== 11:00:04.222169 | f56a6192-277d-4e47-badf-66b2ebec825c ==============================
+[0m11:00:04.222169 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:00:04.223265 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'D:\\Retail-Sales-Performance-Tracker\\dbt_project\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Simi Mathew\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt docs serve', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:00:05.841224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f56a6192-277d-4e47-badf-66b2ebec825c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002295A217290>]}
+[0m11:00:05.904622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f56a6192-277d-4e47-badf-66b2ebec825c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022969FF2BD0>]}
+[0m11:00:06.153294 [error] [MainThread]: Encountered an error:
+[WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions
+[0m11:00:06.191894 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\main.py", line 301, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\task\docs\serve.py", line 24, in run
+    with socketserver.TCPServer((host, port), SimpleHTTPRequestHandler) as httpd:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\socketserver.py", line 456, in __init__
+    self.server_bind()
+  File "C:\Users\Simi Mathew\Python311\Lib\socketserver.py", line 472, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions
+
+[0m11:00:06.194949 [debug] [MainThread]: Command `dbt docs serve` failed at 11:00:06.194949 after 2.04 seconds
+[0m11:00:06.195927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022959FDD850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022959FDDD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022959FDDA90>]}
+[0m11:00:06.196944 [debug] [MainThread]: Flushing usage events
+[0m11:00:07.075879 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:02:08.959492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3BFCC3710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3BFA9D410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3BFCD7F10>]}
+
+
+============================== 11:02:08.959492 | c9a10ae0-1f7c-4e10-957a-339c92ec1c85 ==============================
+[0m11:02:08.959492 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:02:08.966032 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Simi Mathew\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'D:\\Retail-Sales-Performance-Tracker\\dbt_project\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt docs serve', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:02:10.490995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c9a10ae0-1f7c-4e10-957a-339c92ec1c85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3D1DD2DD0>]}
+[0m11:02:10.584162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c9a10ae0-1f7c-4e10-957a-339c92ec1c85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3D1DBBE50>]}
+[0m11:02:10.853507 [error] [MainThread]: Encountered an error:
+[WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions
+[0m11:02:10.858548 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\main.py", line 301, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\task\docs\serve.py", line 24, in run
+    with socketserver.TCPServer((host, port), SimpleHTTPRequestHandler) as httpd:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\socketserver.py", line 456, in __init__
+    self.server_bind()
+  File "C:\Users\Simi Mathew\Python311\Lib\socketserver.py", line 472, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions
+
+[0m11:02:10.860481 [debug] [MainThread]: Command `dbt docs serve` failed at 11:02:10.860481 after 1.99 seconds
+[0m11:02:10.862475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3BFC7C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3BFCD7F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C3BFCD7050>]}
+[0m11:02:10.864467 [debug] [MainThread]: Flushing usage events
+[0m11:02:11.771869 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:02:31.091275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207BF78D210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207BF7E3910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207BF78D550>]}
+
+
+============================== 11:02:31.095067 | a1f45222-d420-40f4-9139-f5b2ee6bc8b7 ==============================
+[0m11:02:31.095067 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:02:31.096870 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Simi Mathew\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'D:\\Retail-Sales-Performance-Tracker\\dbt_project\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt docs serve --port 9000', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:02:32.734805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a1f45222-d420-40f4-9139-f5b2ee6bc8b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207D094CF90>]}
+[0m11:02:32.818272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a1f45222-d420-40f4-9139-f5b2ee6bc8b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207BE980210>]}
+[0m11:04:29.438747 [error] [MainThread]: Encountered an error:
+
+[0m11:04:29.454429 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\cli\main.py", line 301, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\Simi Mathew\Python311\Lib\socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Simi Mathew\Python311\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m11:04:29.470106 [debug] [MainThread]: Command `dbt docs serve` failed at 11:04:29.470106 after 118.45 seconds
+[0m11:04:29.470106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207BF45A690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207BF8045D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207BF8044D0>]}
+[0m11:04:29.470106 [debug] [MainThread]: Flushing usage events
+[0m11:04:30.373816 [debug] [MainThread]: An error was encountered while trying to flush usage events

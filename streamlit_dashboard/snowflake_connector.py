@@ -15,6 +15,8 @@ def fetch_fct_sales():
         schema=os.getenv("SNOWFLAKE_SCHEMA")
     )
 
+    print("Account:", os.getenv("SNOWFLAKE_ACCOUNT"))
+
     query = "SELECT * FROM FCT_SALES"
     df = pd.read_sql(query, conn)
     conn.close()
