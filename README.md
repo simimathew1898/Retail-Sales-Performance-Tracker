@@ -23,19 +23,6 @@ The pipeline focuses on turning raw data into structured insights using cloud an
 - Streamlit – building a basic reporting dashboard
 - Git & GitHub – version control and documentation
 
-## Folder Structure
-
-Retail-Sales-Performance-Tracker/
-├── data/ # Raw CSV file (ignored in .gitignore)
-├── scripts/ # Python ingestion scripts
-├── dbt_project/ # dbt models, configs, and tests
-├── dashboard/ # Streamlit dashboard (to be added)
-├── diagrams/ # ER diagrams or architecture visuals
-├── .gitignore
-├── README.md
-└── requirements.txt
-
-
 ## Project Progress
 
 - [x] CSV data previewed and cleaned using pandas
