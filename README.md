@@ -193,12 +193,6 @@ Retail-Sales-Performance-Tracker/
 
 ---
 
-## About
-
-This project was created as part of a portfolio effort to demonstrate end-to-end data engineering concepts including ingestion, modeling, testing, and reporting using cloud-native and open-source tools. It is suitable for showcasing during technical interviews or as part of a public GitHub portfolio.
-
----
-
 ## License
 
 This project is for educational use only. Dataset is publicly available and used under Kaggle’s open dataset policy.
