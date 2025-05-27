@@ -135,6 +135,11 @@ The dashboard will open in your browser at `http://localhost:8501`.
 streamlit run streamlit_dashboard/app.py
 ```
 
+### Dashboard Preview
+
+![Streamlit Dashboard](diagrams/dashboard_preview.png)
+
+
 The dashboard displays:
 
 - KPI cards: total sales, profit, and order count
