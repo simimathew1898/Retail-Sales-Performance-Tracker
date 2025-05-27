@@ -1,0 +1,11 @@
+name: 'dbt_project'
+version: '1.0'
+config-version: 2
+
+profile: 'dbt_project'  # must match profile name in profiles.yml
+
+model-paths: ["models"]
+
+models:
+  dbt_project:
+    +materialized: table
