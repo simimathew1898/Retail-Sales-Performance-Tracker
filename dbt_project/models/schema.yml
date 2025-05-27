@@ -34,3 +34,22 @@ models:
         description: Total profit per category/region
       - name: total_orders
         description: Count of unique orders
+
+
+  - name: fct_sales_by_month
+    description: Monthly aggregated sales, profit, and orders by category and region
+    columns:
+      - name: order_month
+        description: The first day of each order's month
+        tests:
+          - not_null
+      - name: category
+        description: Product category
+      - name: region
+        description: Sales region
+      - name: total_sales
+        description: Total sales per month
+      - name: total_profit
+        description: Total profit per month
+      - name: total_orders
+        description: Total orders per month

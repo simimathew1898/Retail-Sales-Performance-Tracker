@@ -21,11 +21,12 @@ The pipeline focuses on turning raw CSV data into structured, queryable tables a
 
 ## Tools and Technologies
 
-- **Python** – Used for reading, cleaning, and uploading CSV data to Snowflake
-- **Snowflake** – Cloud-based data warehouse for storing raw and transformed data
-- **dbt** – For SQL-based data modeling, transformations, and documentation
-- **Streamlit** – For building an interactive business dashboard
-- **Git & GitHub** – Version control and documentation
+- **Python** – For data ingestion and automation
+- **Snowflake** – Cloud data warehouse
+- **dbt (data build tool)** – SQL-based transformations, testing, and lineage
+- **Streamlit** – Interactive analytics dashboard
+- **GitHub Actions** – CI/CD automation
+- **Git & GitHub** – Version control
 
 ---
 
@@ -87,6 +88,13 @@ dbt test       # to run column tests
 dbt docs serve # to view documentation at localhost:8000
 ```
 
+Models included:
+- `stg_orders`
+- `fct_sales`
+- `fct_sales_by_month`
+- `fct_sales_rolling_avg`
+- `fct_sales_by_month_ytd`
+
 ---
 
 ## Streamlit Dashboard
@@ -120,11 +128,45 @@ streamlit run streamlit_dashboard/app.py
 
 The dashboard will open in your browser at `http://localhost:8501`.
 
+
+## Streamlit Dashboard
+
+```bash
+streamlit run streamlit_dashboard/app.py
+```
+
+The dashboard displays:
+
+- KPI cards: total sales, profit, and order count
+- Line chart: 3-month rolling average of sales
+- Line chart: Year-to-date (YTD) sales trend
+- Category-level sales breakdown by region
+
 ---
 
-### Dashboard Preview
+## GitHub Actions: CI/CD
 
-![Streamlit Dashboard](diagrams/dashboard_preview.png)
+This project includes a **manual CI workflow** using GitHub Actions.
+
+You can trigger the workflow from the GitHub **Actions tab**, and it will:
+
+- Set up Python and install dbt dependencies
+- Use a securely stored `DBT_PROFILE` secret to connect to Snowflake
+- Run `dbt debug`, `dbt run`, and `dbt test` to validate all models
+
+The workflow file is located at:
+
+```
+.github/workflows/dbt_ci.yml
+```
+
+To trigger it manually:
+1. Go to your repo's **Actions** tab
+2. Select the `CI for dbt + Python` workflow
+3. Click **Run workflow**
+
+This allows you to validate all your dbt transformations on-demand without using Snowflake credits unnecessarily on every push.
+
 
 ---
 
@@ -132,11 +174,13 @@ The dashboard will open in your browser at `http://localhost:8501`.
 
 ```
 Retail-Sales-Performance-Tracker/
-├── data/                        # Raw CSV data (not committed)
-├── dbt_project/                 # dbt models and config
-├── diagrams/                    # ERDs or screenshots (optional)
-├── scripts/                     # Python upload scripts
-├── streamlit_dashboard/         # Streamlit app and Snowflake connector
+├── data/                      # Raw dataset (not pushed)
+├── dbt_project/               # dbt models and config
+├── diagrams/                  # Dashboard preview and visuals
+├── scripts/                   # Python upload scripts
+├── streamlit_dashboard/       # Dashboard and connector code
+├── .github/workflows/         # CI pipeline config
+├── .env                       # Snowflake credentials (ignored)
 ├── .gitignore
 ├── README.md
 └── requirements.txt

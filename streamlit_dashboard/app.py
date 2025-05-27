@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from snowflake_connector import fetch_fct_sales
+from snowflake_connector import fetch_fct_sales, fetch_sales_rolling_avg, fetch_sales_ytd
 
 st.set_page_config(page_title="Retail Sales Dashboard", layout="wide")
 
@@ -28,3 +28,15 @@ st.bar_chart(sales_by_cat)
 # Data preview
 st.subheader("Raw Data")
 st.dataframe(filtered_df)
+
+st.subheader("3-Month Rolling Average of Sales")
+df_rolling = fetch_sales_rolling_avg()
+df_rolling["ORDER_MONTH"] = pd.to_datetime(df_rolling["ORDER_MONTH"])
+rolling = df_rolling.groupby("ORDER_MONTH")["SALES_3MO_AVG"].mean()
+st.line_chart(rolling)
+
+st.subheader("Year-to-Date (YTD) Sales")
+df_ytd = fetch_sales_ytd()
+df_ytd["ORDER_MONTH"] = pd.to_datetime(df_ytd["ORDER_MONTH"])
+ytd = df_ytd.groupby("ORDER_MONTH")["YTD_SALES"].sum()
+st.line_chart(ytd)
