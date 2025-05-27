@@ -23,4 +23,5 @@ with_ytd as (
     from source
 )
 
+
 select * from with_ytd
